@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Deleting product</title> 
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    <body>
+        <div>
+            <h1>Wilt u deze product verwijderd worden ? Dan "ONBESCHIKBAAR"</h1>
+            <h1>------------------------------------------------------------------</h1>
+           <!-- <form id ="id"> 
+                ProductId:<input type="number" required="required" id="ProductId" />
+
+                <button type="submit">Get Product</button>
+                <br/><br/>
+            </form>-->
+            <form id="Product">
+                 ProductId:<input type="number" required="required" readonly='readonly' id="ProductId" />
+                <br/><br/>
+                 ProductName: <input type="text" required="required" readonly='readonly' id="ProductName" />  
+                <br/><br/>
+                ProductPrice: <input type="text" required="required" readonly='readonly' id="ProductPrice" />
+                <br/><br/>
+                Nr.Stock: <input type="number" required="required" readonly='readonly' id="NrStock" />
+                <br/><br/>
+                ProductStatus:<select required="required" id="ProductStatus">
+                    <option value="">Select status</option>
+                    <option value="BESCHIKBAAR">BESCHIKBAAR</option>
+                    <option value="ONBESCHIKBAAR">ONBESCHIKBAAR</option>
+                </select>
+                <br/><br/>
+                <button type="submit">Het status verandering</button>
+                <script src="scripts/product.js"></script>
+            </form>
+            <form id="delete">
+                <br/><br/>
+                " Als u deze product helemaal wilt verwijderen, Dan druk u op Verwijderen"
+                <button type="submit">Verwijderen</button>
+            </form>
+            <br/>
+            <a class="button center" href="home.html">home</a>
+
+

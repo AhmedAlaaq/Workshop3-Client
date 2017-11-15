@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Updating Address</title> 
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    <body>
+        <div>
+            <h1>Verander u Alstublieft de volgende informatie van een klant adres</h1>
+            <h1>------------------------------------------------------------------</h1>
+           <!-- <form id ="kiesid"> 
+                AddressId:<input type="number" required="required" placeholder="Address Id" id="getAdresId" />
+                <button type="submit">Get Address</button>
+                <br/><br/>
+            </form>-->
+            <form id="nAddress">
+                AddressId:<input type="number" required="required" placeholder="Address Id" id="getAdresId" />
+                <br/><br/>
+                StreetName: <input type="text" required="required" id="Streetname" />  
+                <br/><br/>
+                Number: <input type="number" required="required" id="Number" />
+                <br/><br/>
+                Addition: <input type="text" id="Addition" />
+                <br/><br/>
+                City: <input type="text" required="required" id="City" />  
+                <br/><br/>
+                Postalcode: <input type="text" required="required"   pattern="[1-9][0-9]{3}\s?[a-zA-Z]{2}" id="Postalcode" />  
+                <br/><br/>
+                AddressType:<select required="required" id="AddressType">
+                    <option value="">Select type</option>
+                    <option value="POSTADRES">POSTADRES</option>
+                    <option value="FACTUURADRES">FACTUURADRES</option>
+                     <option value="BEZORGADRES">BEZORGADRES</option>
+                </select>
+                <br/><br/>
+               CustomerId:<input type="number" readonly='readonly' id="CustomerId" />
+                <br/><br/>
+                <button type="submit">Veranderen</button>
+                <script src="scripts/address.js"></script>
+            </form>
+            <form id="deleteAddress">
+                <br/><br/>
+                " Als u deze adres helemaal wilt verwijderen, Dan druk u op Verwijderen"
+                <button type="submit">Verwijderen</button>
+            </form>
+            <br/>
+            <a class="button center" href="home.html">home</a>
+

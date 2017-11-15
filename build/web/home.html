@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+         <title>Applikaasie 3.0</title>
+        <link rel="stylesheet" href="css/ahmedStyle.css" />
+    </head>
+    <body style = "background: url(images/back.jpg); background-size: 100%;">
+         <h1 class="center" th:text="#{hello.welcome}">Welcome to Applikaasie 3.0 beta</h1>
+        <ul>
+            <li><a>Accounts</a>
+                <ul>
+                    <li><a>All accounts</a></li>
+                    <li><a>Add new account</a></li>
+                    <li><a>Delete account</a></li>
+                    <li><a>Updating account</a></li>
+                </ul>
+            </li>
+            <li><a>Customers</a>
+                <ul>
+                    <li><a>All customers</a></li>
+                    <li><a href="address.html">All addresses</a></li>
+                    <li><a>Add new customer</a></li>
+                    <li><a href="addNewAddress.html">Add new address</a></li>
+                </ul>
+            </li>
+            <li><a>Products</a>
+                <ul>
+                    <li><a href="product.html">All products</a></li>
+                    <li><a href="addNewProduct.html">Add new product</a></li>
+                </ul>
+            </li>
+            <li><a>Orders</a>
+                <ul>
+                    <li><a>All Orders</a></li>
+                    <li><a>Add new Order</a></li>
+                    <li><a>Delete Order</a></li>
+                    <li><a>Updating Order</a></li>
+                </ul>
+            </li>
+        </ul>
+         <div id="footer">
+             <span>&copy; 2017 RS4.nl</span>
+         </div>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Adding new address</title>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    <body>
+        <div>
+            <h1>Voeg u alstublieft de nieuwe address informatie toe</h1>
+            <h1>------------------------------------------------------------------</h1>
+            <form id="newAddress">
+                StreetName: <input type="text" required="required"  placeholder="StreetName" id="Streetname" />  
+                <br/><br/>
+                Number: <input type="number" required="required"  placeholder="Number" id="Number" />
+                <br/><br/>
+                Addition: <input type="text" placeholder="Addition"  id="Addition" />
+                <br/><br/>
+                City: <input type="text" required="required"  placeholder="City" id="City" />  
+                <br/><br/>
+                Postalcode: <input type="text" required="required"   pattern="[1-9][0-9]{3}\s?[a-zA-Z]{2}" placeholder="PostalCode" id="Postalcode" />  
+                <br/><br/>
+                AddressType:<select required="required" id="AddressType">
+                    <option value="">Select type</option>
+                    <option value="POSTADRES">POSTADRES</option>
+                    <option value="FACTUURADRES">FACTUURADRES</option>
+                     <option value="BEZORGADRES">BEZORGADRES</option>
+                </select>
+                <br/><br/>
+                CustomerId:<select required="required" id="CustomerId">
+                    <option value="">Select Customer id</option>
+                </select>
+                <br/><br/>
+                    
+                <button type="submit">Toevoegen</button>
+                <script src="scripts/address.js"></script>
+            </form>
+             <br/>
+            <a class="button center" href="home.html">home</a>
+        </div>
+ 
