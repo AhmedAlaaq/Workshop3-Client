@@ -10,7 +10,8 @@ and open the template in the editor.
 
 
 body {
-    footer{
+  
+    .footer{
     height: 50px;
    width: 100%;
     text-align: center;
@@ -113,4 +114,3 @@ table, th, td {
 .firstcol {
     width: 300px;
 }
-

@@ -173,24 +173,60 @@ $(document).on("submit", "form#deleteAddress", function (event) {
 });
 
 function deleteAddress(id) {
-    $.ajax({
-        method: "DELETE",
-        url: "http://localhost:8080/Workshop3/webresources/address/" + id,
-        error: function () {
-            console.log("error");
-        },
-        success: function () {
-            window.location.href = "http://localhost:8080/Workshop3-Client/address.html";
-            console.log("Gelukt");
+    $(".cover").fadeIn('slow');
+    $(".popup").fadeIn('slow');
+    
+    
+    $(".popup").on('click', function () {
+        if ($(event.target).is("#close")) {
+            $(".cover").fadeOut('slow');
+            $(".popup").fadeOut('slow');
+        }
+
+    });
+    $(".options").on('click', function () {
+        if ($(event.target).is("#del")) {
+            let del = confirm("Letop:Deze Adres informatie gaat verwijderd worden !");
+            if (del === true) {
+                $.ajax({
+                    method: "DELETE",
+                    url: "http://localhost:8080/Workshop3/webresources/address/" + id,
+                    error: function () {
+                        console.log("error");
+                    },
+                    success: function () {
+                        window.location.href = "http://localhost:8080/Workshop3-Client/address.html";
+                        console.log("Gelukt");
+                    }
+                });
+            }
         }
     });
 }
-
-
-
-//// Het updating van een address en verwijderen methode gebruik van get id (andere manier)
-
-/*$(document).on("submit", "form#kiesid", function (event) {
+/* let del = confirm("Letop:Deze Adres informatie gaat verwijderd worden !");
+ if (del === true)
+ {
+ alert("wilt u alstublieft doorgaan ?");
+ $.ajax({
+ method: "DELETE",
+ url: "http://localhost:8080/Workshop3/webresources/address/" + id,
+ error: function () {
+ console.log("error");
+ },
+ success: function () {
+ window.location.href = "http://localhost:8080/Workshop3-Client/address.html";
+ console.log("Gelukt");
+ }
+ });
+ } else
+ {
+ alert("wilt u daarover bedenken !");
+ }
+ }
+ 
+ //// Het updating van een address en verwijderen methode gebruik van get id (andere manier)
+ 
+ /*$(document).on("submit", "form#kiesid", function (event) {
  event.preventDefault();
  var id = $("#getAdresId").val();
  get(id);

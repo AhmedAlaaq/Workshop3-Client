@@ -11,8 +11,30 @@ and open the template in the editor.
         <title>Products</title> 
         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/dailog.css" />
     </head>
-    <body  style = "background: url(images/vlag.jpg); background-size: 100%;"> 
+    <body  style = "background: url(images/vlag.jpg); background-size: 100% 150%;"> 
+        <form id="newProduct">
+            ProductName: <input type="text" required="required"  placeholder="ProductName" id="ProductName" />   
+            ProductPrice:<input type="text" required="required" pattern="\d{2}.?\d{2}" placeholder="ProductPrice" id="ProductPrice" />
+            <br/><br/>
+            Nr.Stock:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" required="required" placeholder="number of stocks"  id="NrStock" />          
+            ProductStatus:<select required="required" id="ProductStatus">               
+                <option value="">Select status</option>
+                <option value="BESCHIKBAAR">BESCHIKBAAR</option>
+                <option value="ONBESCHIKBAAR">ONBESCHIKBAAR</option>
+            </select>
+            <br/>
+            <button type="submit" style = "background-color: #004d40; color: white;">Toevoegen </button>
+        </form>
+        <div class="popup">
+            <span id="close">&times;</span>
+            <p>Wilt u deze Product doorverwijderen ?</p>
+            <div class="options">
+                <a id="cancel" href="">cancel</a>
+                <a  id="del" href="">verwijderen</a>
+            </div>
+        </div>
         <div class="listTitle">
             <h1 class="center">Product overzicht</h1>
 
@@ -20,14 +42,14 @@ and open the template in the editor.
                 <table class="table" id="products">
                     <thead>
                         <tr>
-                            <th style=" font-size: 20px">Id</th>
-                            <th style=" font-size: 20px">ProductName</th>
-                            <th style=" font-size: 20px">ProductPrice</th>
-                            <th style=" font-size: 20px">Nr.Stock</th>
-                            <th style=" font-size: 20px">ProductStatus</th>
-                            <th style=" font-size: 18px"></th>
-                            <th style=" font-size: 18px"></th>
-                            <th style=" font-size: 20px"></th>
+                            <th style=" font-size: 18px">Id</th>
+                            <th style=" font-size: 18px">ProductName</th>
+                            <th style=" font-size: 18px">ProductPrice</th>
+                            <th style=" font-size: 18px">Nr.Stock</th>
+                            <th style=" font-size: 18px">ProductStatus</th>
+                            <th ></th>
+                            <th ></th>
+                            <th ></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -36,10 +58,9 @@ and open the template in the editor.
                 </table>
             </div>
             <br/>
-       <a class="button center" href="addNewProduct.html">Nieuw Product Toevoeging</a>
-       <a class="button center" href="home.html">home</a>
- <br/>
-
+            <a class="button center" href="home.html">home</a>
+            <br/>
+            <div class="cover"></div>
 
 
 

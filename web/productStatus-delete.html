@@ -9,8 +9,9 @@ and open the template in the editor.
         <title>Deleting product</title> 
         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/dailog.css" />
     </head>
-    <body>
+    <body style="background-color:antiquewhite;">
         <div>
             <h1>Wilt u deze product verwijderd worden ? Dan "ONBESCHIKBAAR"</h1>
             <h1>------------------------------------------------------------------</h1>
@@ -20,14 +21,23 @@ and open the template in the editor.
                 <button type="submit">Get Product</button>
                 <br/><br/>
             </form>-->
+           <div class="popup">
+     <span id="close">&times;</span>
+     <p>Wilt u deze Product doorverwijderen ?</p>
+     <div class="options">
+         <a id="cancel" href="">cancel</a>
+         <a  id="del" href="">verwijderen</a>
+     </div>
+ </div>
+           <br/>
             <form id="Product">
-                 ProductId:<input type="number" required="required" readonly='readonly' id="ProductId" />
+                 ProductId:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" required="required" readonly='readonly' id="ProductId" />
                 <br/><br/>
-                 ProductName: <input type="text" required="required" readonly='readonly' id="ProductName" />  
+                 ProductName:<input type="text" required="required" readonly='readonly' id="ProductName" />  
                 <br/><br/>
-                ProductPrice: <input type="text" required="required" readonly='readonly' id="ProductPrice" />
+                ProductPrice:&nbsp;<input type="text" required="required" readonly='readonly' id="ProductPrice" />
                 <br/><br/>
-                Nr.Stock: <input type="number" required="required" readonly='readonly' id="NrStock" />
+                Nr.Stock:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" required="required" readonly='readonly' id="NrStock" />
                 <br/><br/>
                 ProductStatus:<select required="required" id="ProductStatus">
                     <option value="">Select status</option>
@@ -45,5 +55,5 @@ and open the template in the editor.
             </form>
             <br/>
             <a class="button center" href="home.html">home</a>
-
+<div class="cover"></div>
 

@@ -9,25 +9,33 @@ and open the template in the editor.
         <title>Addresses</title>
         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/dailog.css" />
     </head>
     <body  style = "background: url(images/vlag.jpg); background-size: 100%;"> 
-
+        <div class="popup">
+            <span id="close">&times;</span>
+            <p>Wilt u deze Adres doorverwijderen ?</p>
+            <div class="options">
+                <a id="cancel" href="">cancel</a>
+                <a  id="del" href="">verwijderen</a>
+            </div>
+        </div>
         <div class="listTitle">
             <h1 class="center"> Address overzicht</h1>
             <div>
                 <table class="table" id="addresses">
                     <thead>
                         <tr>
-                            <th style=" font-size: 22px">StreetName</th>
-                            <th style=" font-size: 22px">Number</th>
-                            <th style=" font-size: 22px">Addition</th>
-                            <th style=" font-size: 22px">PostalCode</th>
-                            <th style=" font-size: 22px">City</th>
-                            <th style=" font-size: 22px">AddressType</th>
-                            <th style=" font-size: 22px">KlantName</th>
-                            <th style=" font-size: 22px">KLantId</th>
-                            <th style=" font-size: 25px"></th>
-                            <th style=" font-size: 25px"></th>
+                            <th style=" font-size: 18px">StreetName</th>
+                            <th style=" font-size: 18px">Number</th>
+                            <th style=" font-size: 18px">Addition</th>
+                            <th style=" font-size: 18px">PostalCode</th>
+                            <th style=" font-size: 18px">City</th>
+                            <th style=" font-size: 18px">AddressType</th>
+                            <th style=" font-size: 18px">KlantName</th>
+                            <th style=" font-size: 18px">KLantId</th>
+                            <th ></th>
+                            <th ></th>
                         </tr>
                     </thead>
                     <tbody> 
@@ -39,3 +47,4 @@ and open the template in the editor.
             <a class="button center" href="addNewAddress.html">Nieuw Adres Toevoeging</a>
             <a class="button center" href="home.html">home</a>
             <br/>
+<div class="cover"></div>
